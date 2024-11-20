@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小游戏</title>
+    <link href="res/saintyle.css" rel="stylesheet" type="text/css">
+    <script src="res/wordlists.js"></script>
+    <script src="res/script.js"></script>
+
+    <style>
+        /* 主体布局 */
+
+        /* 主内容区域 */
+        .main-content {
+            width: 100%; /* 主内容区域占满宽度 */
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* width: 100%; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td {
+            padding: 2px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: #eee;
+        }
+
+        button:hover {
+            background-color: beige;
+        }
+
+        h1,
+        div {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .button-table {
+            width: 40px;
+            height: 40px;
+            border: 0px;
+            border-radius: 10px;
+            background-color: #eee;
+            /* font-weight: bold; */
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .button-table:hover {
+            background-color: burlywood !important;
+        }
+
+        .bordered {
+            border-radius: 10px;
+            margin: auto;
+            padding: 8px;
+            width: fit-content;
+            display: none;
+        }
+        .progress-container {
+            width: 80%;
+            height: 50px;
+            margin: auto; /* 添加这行代码 */
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .progress-text {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; margin-top: 20px;">我的相册</h1>
+        <br>
+    </header>
+    <div class="navtop">
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="gallery.html">我的相册</a>
+            <a href="works.html">我的作品</a>
+            <a href="learning.html">学习心得</a>
+            <a href="strand.html">🕹️小游戏</a>        
+        </nav>
+    </div>
+
+    
+
+    <div class="container">
+        <!-- 左侧栏 -->
+        <div class="sidebar">
+            <h2>Word Strand</h2>
+            游戏会呈现一个由字母组成的网格。你的目标是从这个字母网格中找出有效单词。这些单词的相邻字母在网格中也相邻。单词必须至少包含四个字母，且要在答案列表中。每找到3个正确但不在列表中的单词，就能得到一次提示机会。 找到所有的有效单词，即可完成游戏。
+        </div>
+        <div class="main">
+            <h1>Word Strands</h1>
+                <!-- 主内容区域 -->
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar" ></div>
+                    <div class="progress-text">Loading...</div>
+                </div>
+                <div class="main-content">
+                    <div id="start-div" style="display: none;">
+                        <button style="height: 50px; width: 80%;margin-bottom: 10px;" onclick="initPuzzle('H')"> Easy </button>
+                        <button style="height: 50px; width: 80%;" onclick="initPuzzle('T')"> Hard </button>
+                    </div>
+                    <div id="input-div" style="display: none;">
+                        <input disabled id="input1">
+                        <button onclick="submitWord()">submit</button>
+                        <button onclick="clearSelection()">clear</button>
+                        <button onclick="requestHint()">hint</button>
+                    </div>
+                    <br>
+                    <div><table id="buttonTable"></table></div>
+                </div>         
+        </div>
+        <div class="aside">
+            <!-- 右边栏 -->
+            <div id="word-display">
+                <p id="info-p"></p>
+                <br>
+                <p id="found-words"style="background-color: #cbffcb;">Accepted: </p>
+                <br>
+                <p id="unaccepted-words" style="background-color: #ffdce2;">Unaccepted: </p>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+        An introduction to myself.
+    </footer>
+</body>
+
+
+<script>
+    const progressBar = document.querySelector('.progress-bar');
+    const progressText = document.querySelector('.progress-text');
+    
+    let progress = 0;
+    
+    function updateProgress() {
+      progress += 20;
+      progressBar.style.width = `${progress}%`;
+      progressText.textContent = `Loading... ${progress}%`;
+    
+      if (progress >= 100) {
+        // 模拟完成加载
+        setTimeout(() => {
+          // 跳转到下一个页面
+          document.getElementById("progress-container").style.display="none";
+          document.getElementById("start-div").style.display = "block";
+        }, 1000);
+      } else {
+        setTimeout(updateProgress, 500);
+      }
+    }
+    
+    updateProgress();
+</script>
+</html>
