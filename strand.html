@@ -34,10 +34,12 @@
             border: 0px;
             border-radius: 5px;
             background-color: #eee;
+            color: black;
         }
 
         button:hover {
             background-color: beige;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
         }
 
         h1,
@@ -76,7 +78,7 @@
             height: 50px;
             margin: auto; /* 添加这行代码 */
             text-align: center;
-            background-color: #ffffff;
+            background-color: #e8e8e8;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -96,7 +98,7 @@
 </head>
 <body>
     <header>
-        <h1 style="text-align: center; margin-top: 20px;">我的相册</h1>
+        <h1 style="text-align: center; margin-top: 20px;">小游戏</h1>
         <br>
     </header>
     <div class="navtop">
@@ -152,7 +154,7 @@
         
     </div>
     <footer>
-        An introduction to myself.
+        (c) 2024 Mirpri
     </footer>
 </body>
 
@@ -161,7 +163,7 @@
     const progressBar = document.querySelector('.progress-bar');
     const progressText = document.querySelector('.progress-text');
     
-    let progress = 0;
+    let progress = -20;
     
     function updateProgress() {
       progress += 20;
