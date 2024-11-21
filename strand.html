@@ -44,12 +44,7 @@
             box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
         }
 
-        h1,
-        div {
-            text-align: center;
-        }
-
-        p {
+        .main {
             text-align: center;
         }
 
@@ -119,7 +114,10 @@
         <!-- 左侧栏 -->
         <div class="sidebar">
             <h2>Word Strand</h2>
-            游戏会呈现一个由字母组成的网格。你的目标是从这个字母网格中找出有效单词。这些单词的相邻字母在网格中也相邻。单词必须至少包含四个字母，且要在答案列表中。每找到3个正确但不在列表中的单词，就能得到一次提示机会。 找到所有的有效单词，即可完成游戏。
+            <p>游戏会呈现一个由字母组成的网格。你的目标是从这个字母网格中找出有效单词。</p>
+            <p>这些单词的相邻字母在网格中也相邻。单词必须至少包含四个字母，且要在答案列表中。</p>
+            <p>每找到3个正确但不在列表中的单词，就能得到一次提示机会。</p>
+            <p>找到所有的有效单词，即可完成游戏。</p>
         </div>
         <div class="main">
             <h1>Word Strands</h1>
@@ -148,13 +146,14 @@
             <div id="word-display">
                 <p id="info-p"></p>
                 <br>
-                <p id="found-words"style="background-color: #cbffcb;">Accepted: </p>
+                <p id="found-words"style="background-color: #cbffcb; padding: 10px;">Accepted: </p>
                 <br>
-                <p id="unaccepted-words" style="background-color: #ffdce2;">Unaccepted: </p>
+                <p id="unaccepted-words" style="background-color: #ffdce2; padding: 10px;">Unaccepted: </p>
             </div>
         </div>
         
     </div>
+    <br>
     <footer>
         (c) 2024 Mirpri
     </footer>

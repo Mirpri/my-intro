@@ -138,7 +138,7 @@ function submitWord() {
             accepted.push(ans);
             //alert("You have found " + found + "/" + total);
             document.getElementById("info-p").textContent = "Hidden words: " + NOA + "  Found: " + found;
-            document.getElementById("found-words").textContent += "\n" + accepted;
+            document.getElementById("found-words").textContent += "\n" + ans;
             document.getElementById("found-words").style.display="block";
         clearSelection(1);
             if (found == total) { alert("You have found all the words."); document.getElementById("info-p").textContent = "All " + NOA + " hidden words were found. You won!"; }
