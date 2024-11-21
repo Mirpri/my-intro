@@ -8,6 +8,7 @@ body {
     color: #333;
 }
 
+
 .container {
     margin: 0 auto;
     padding: 20px;
@@ -19,15 +20,22 @@ h1 {
     margin-bottom: 20px;
     color: #444;
 }
+h2{
+    margin: auto;
+}
 a{
+    display: block;
     background-color: #eee;
     padding: 5px;
-    margin: 10px;
+    margin: 20px auto auto 5px;
     border-radius: 10px;
+    transition: 0.5s;
 }
 a:hover {
     text-decoration: none !important;
-
+    background-color: #2397e4;
+    color: #fff;
+    box-shadow: rgba(0, 76, 138, 0.5) 0px 0px 10px 0px;
 }
 
 .profile-card {
@@ -37,14 +45,24 @@ a:hover {
     gap: 20px;              /* 卡片之间的间距 */
 }
 
+
+@media (min-width: 600px) {
+    .profile-card{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
 .profile {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 20px;
     width: 70%;             /* 卡片宽度相对页面宽度 */
+    max-width: 300px;       /* 最大宽度限制 */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    margin: auto;
 }
 
 .profile:hover {
@@ -68,4 +86,15 @@ a:hover {
 
 .name:hover {
     text-decoration: underline;
+}
+
+.githubname{
+    font-size: 0.9em;
+    color: #00487f;
+    background-color: #c4daec;
+    padding: 3px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: fit-content;
+    margin: 5px auto;
 }
