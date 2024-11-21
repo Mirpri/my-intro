@@ -14,9 +14,11 @@
             bottom: 0;
             left: 0;
             background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 0px;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: 0.1s ease-in-out;
         }
 
         .modal-content {
@@ -24,7 +26,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            width: 50%;
+            width: 80%;
             max-width: 500px;
         }
 
@@ -54,21 +56,24 @@
     </div>
     <div class="container">
         <!-- 左侧栏 -->
-        <div class="sidebar">
-            <h2>我的信息</h2>
-            <img src="res/potrait.jpg" width="100px">
-            <ul>
-                <li>姓名：刘士卓</li>
-                <li>学院：计算机科学与技术</li>
-                <li>班级：2410</li>
-            </ul>
+        <div style="display: flex; flex-wrap: wrap;" class="sidebar">
+            <div style="min-width: 200px; margin: 0 auto;">
+                <h2>我的信息</h2>
+                <div style="margin: auto; text-align: center;"><img src="res/potrait.jpg" width="100px"></div>
+                <ul>
+                    <li>姓名：刘士卓</li>
+                    <li>学院：计算机科学与技术</li>
+                    <li>班级：2410</li>
+                </ul>
+            </div>
             <br>
-            <h2>My avatar</h2>
-            <img src="res/title.png" width="100px">
-            <ul>
-                <li>name: Mirpri</li>
-            </ul>
-
+            <div style="min-width: 200px; margin: 0 auto;">
+                <h2>My avatar</h2>
+                <div style="margin: auto; text-align: center;"><img src="res/title.png" width="100px"></div>
+                <ul>
+                    <li>name: Mirpri</li>
+                </ul>
+            </div>
         </div>
 
         <!-- 中间内容 -->

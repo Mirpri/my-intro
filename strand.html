@@ -34,11 +34,13 @@
             border: 0px;
             border-radius: 5px;
             background-color: #eee;
+            margin:auto;
             color: black;
         }
 
         button:hover {
             background-color: beige;
+            border: 0px;
             box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
         }
 
@@ -131,7 +133,7 @@
                         <button style="height: 50px; width: 80%;margin-bottom: 10px;" onclick="initPuzzle('H')"> Easy </button>
                         <button style="height: 50px; width: 80%;" onclick="initPuzzle('T')"> Hard </button>
                     </div>
-                    <div id="input-div" style="display: none;">
+                    <div id="input-div" style="display: none;min-width: 390px;">
                         <input disabled id="input1">
                         <button onclick="submitWord()">submit</button>
                         <button onclick="clearSelection()">clear</button>

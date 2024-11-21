@@ -86,13 +86,22 @@ a{
 }
 
 button{
-    border: none;
+    border: #e46623 2px solid;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: #eee;
+    padding: 8px;
+    margin: 5px;
+    transition: 0.5s;
 }
 
-button:hover,
 a:hover{
     background-color: #8a23e4;
     box-shadow: rgb(138, 35, 228,0.5) 0px 0px 10px 0px;
+}
+button:hover{
+    border: #8a23e4 2px solid;
+    box-shadow: rgb(138, 35, 228,0.5) 0px 0px 10px 0px; 
 }
 
 footer {
@@ -111,12 +120,16 @@ footer {
 }
 
 /* 响应式设计 */
-@media (max-width: 950px) {
+@media (max-width: 900px) {
     .container {
         flex-direction: column;
+        max-width: 550px;
+        margin: auto;
     }
     .sidebar, .aside {
         width: 100%;
+        max-width: 600px;
+        margin: auto;
     }
     .main {
         margin: 10px 0;
