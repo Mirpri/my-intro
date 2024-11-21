@@ -59,7 +59,7 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 70%;             /* 卡片宽度相对页面宽度 */
-    max-width: 300px;       /* 最大宽度限制 */
+    max-width: 350px;       /* 最大宽度限制 */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     margin: auto;
