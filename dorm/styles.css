@@ -26,13 +26,14 @@ h2{
 a{
     display: block;
     background-color: #eee;
-    padding: 5px;
+    color: #333;
+    text-decoration: none;
+    padding: 7px;
     margin: 20px auto auto 5px;
     border-radius: 10px;
     transition: 0.5s;
 }
-a:hover {
-    text-decoration: none !important;
+.highlightlink:hover {
     background-color: #2397e4;
     color: #fff;
     box-shadow: rgba(0, 76, 138, 0.5) 0px 0px 10px 0px;
@@ -97,4 +98,91 @@ a:hover {
     font-weight: bold;
     width: fit-content;
     margin: 5px auto;
+}
+
+.news-board {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-board h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news-item {
+    margin-bottom: 15px;
+}
+
+.news-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #555;
+}
+
+.news-item p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #777;
+    text-align: left;
+    text-indent: 2em;
+}
+
+.navbar {
+    position: sticky;
+    margin: 0 auto 20px auto;
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display:flex;
+    justify-content: space-around;
+}
+
+
+.nav-item a {
+    padding: 10px 20px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+.nav-item a:hover {
+    background-color: #ccc;
+}
+
+footer {
+    margin: 0 0 0 0;
+    padding: 20px;
+    background-color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 24px;
+    color: #333;
+}
+
+footer p {
+    font-size: 16px;
+    color: #777;
+    text-align: left;
+    text-indent: 2em;
+}
+
+html {
+    scroll-behavior: smooth;
 }
