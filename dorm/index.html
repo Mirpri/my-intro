@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <!-- <meta http-equiv="refresh" content="0; URL=https://d10-410.github.io/"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>东十410寝室主页</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://d10-410.github.io/";
+        }, 3000);
+    </script>
 </head>
 <body>
     <div class="notification">
-        <p>⚠️ 本网站已迁移到新网址，此页内容不再更新：<a href="https://d10-410.github.io/" target="_blank">https://d10-410.github.io/</a></p>
+        <p>⚠️ 本网站已迁移到新网址，此页内容不再更新：<a href="https://d10-410.github.io/">https://d10-410.github.io/</a></p>
+        <p>页面将在 <span id="countdown">3</span> 秒后跳转...</p>
     </div>
+    <script>
+        var countdownElement = document.getElementById('countdown');
+        var countdown = 3;
+        setInterval(function() {
+            countdown--;
+            if (countdown >= 0) {
+                countdownElement.textContent = countdown;
+            }
+        }, 1000);
+    </script>
     <div class="container" id="home">
         <h1>欢迎来到东十410</h1>
         <nav class="navbar">
